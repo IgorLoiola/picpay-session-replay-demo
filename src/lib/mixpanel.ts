@@ -47,7 +47,7 @@ export function trackButtonClicked(
 export function trackCardOrdered(props: Record<string, unknown>) {
   if (!MIXPANEL_TOKEN) return;
   mixpanel.track("Card Ordered", {
-    business_context: "card_request",
+    business_context: "CARTOES",
     ...props,
   });
 }

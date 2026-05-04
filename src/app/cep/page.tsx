@@ -13,12 +13,12 @@ export default function CepPage() {
 
   useEffect(() => {
     initMixpanel();
-    trackScreenViewed("CEP Input", "card_request");
+    trackScreenViewed("CEP Input", "CARTOES");
   }, []);
 
   useEffect(() => {
     if (cep.length === 8) {
-      trackButtonClicked("CEP Submitted", "CEP Input", "card_request", { cep });
+      trackButtonClicked("CEP Submitted", "CEP Input", "CARTOES", { cep });
       const t = setTimeout(() => router.push("/street-number"), 500);
       return () => clearTimeout(t);
     }

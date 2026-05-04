@@ -14,7 +14,7 @@ export default function StreetNumberPage() {
 
   useEffect(() => {
     initMixpanel();
-    trackScreenViewed("Street Number", "card_request");
+    trackScreenViewed("Street Number", "CARTOES");
   }, []);
 
   return (
@@ -41,7 +41,7 @@ export default function StreetNumberPage() {
           <GreenButton
             disabled={!number}
             onClick={() => {
-              trackButtonClicked("Continuar", "Street Number", "card_request", { street_number: number });
+              trackButtonClicked("Continuar", "Street Number", "CARTOES", { street_number: number });
               router.push("/complement");
             }}
           >
@@ -50,7 +50,7 @@ export default function StreetNumberPage() {
         </div>
         <button
           onClick={() => {
-            trackButtonClicked("Endereco sem numero", "Street Number", "card_request");
+            trackButtonClicked("Endereco sem numero", "Street Number", "CARTOES");
             router.push("/complement");
           }}
           style={{ background: "none", border: "none", color: "#21C25E", fontSize: 14, cursor: "pointer", padding: 0, width: "100%", textAlign: "center" }}

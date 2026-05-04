@@ -13,7 +13,7 @@ export default function ConfirmationPage() {
 
   useEffect(() => {
     initMixpanel();
-    trackScreenViewed("Confirmation", "card_request");
+    trackScreenViewed("Confirmation", "CARTOES");
   }, []);
 
   return (
@@ -44,7 +44,7 @@ export default function ConfirmationPage() {
             <button
               onClick={() => {
                 setInsurance(!insurance);
-                trackButtonClicked(insurance ? "Insurance Disabled" : "Insurance Enabled", "Confirmation", "card_request");
+                trackButtonClicked(insurance ? "Insurance Disabled" : "Insurance Enabled", "Confirmation", "CARTOES");
               }}
               style={{
                 width: 44, height: 24, borderRadius: 12, border: "none", cursor: "pointer",
@@ -70,7 +70,7 @@ export default function ConfirmationPage() {
         <div style={{ marginTop: "auto", paddingBottom: 32 }}>
           <GreenButton
             onClick={() => {
-              trackButtonClicked("Solicitar PicPay Card", "Confirmation", "card_request");
+              trackButtonClicked("Solicitar PicPay Card", "Confirmation", "CARTOES");
               trackCardOrdered({
                 card_type: "Platinum",
                 cashback: true,

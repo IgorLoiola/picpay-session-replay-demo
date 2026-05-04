@@ -13,7 +13,7 @@ export default function DueDatePage() {
 
   useEffect(() => {
     initMixpanel();
-    trackScreenViewed("Due Date", "card_request");
+    trackScreenViewed("Due Date", "CARTOES");
   }, []);
 
   return (
@@ -33,7 +33,7 @@ export default function DueDatePage() {
             <button
               key={day}
               onClick={() => {
-                trackButtonClicked(`Todo dia ${day}`, "Due Date", "card_request", { due_date: day });
+                trackButtonClicked(`Todo dia ${day}`, "Due Date", "CARTOES", { due_date: day });
                 router.push("/confirmation");
               }}
               style={{

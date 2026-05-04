@@ -12,7 +12,7 @@ export default function CardOfferPage() {
 
   useEffect(() => {
     initMixpanel();
-    trackScreenViewed("Card Offer", "card_request");
+    trackScreenViewed("Card Offer", "CARTOES");
   }, []);
 
   return (
@@ -61,7 +61,7 @@ export default function CardOfferPage() {
         <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 12, paddingBottom: 32 }}>
           <GreenButton
             onClick={() => {
-              trackButtonClicked("Quero Platinum com cashback", "Card Offer", "card_request");
+              trackButtonClicked("Quero Platinum com cashback", "Card Offer", "CARTOES");
               router.push("/income");
             }}
           >
@@ -70,7 +70,7 @@ export default function CardOfferPage() {
           <GreenButton
             variant="outline"
             onClick={() => {
-              trackButtonClicked("Quero Platinum sem cashback", "Card Offer", "card_request");
+              trackButtonClicked("Quero Platinum sem cashback", "Card Offer", "CARTOES");
               router.push("/income");
             }}
           >

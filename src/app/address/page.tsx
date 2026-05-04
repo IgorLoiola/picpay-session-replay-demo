@@ -11,7 +11,7 @@ export default function AddressPage() {
 
   useEffect(() => {
     initMixpanel();
-    trackScreenViewed("Delivery Address", "card_request");
+    trackScreenViewed("Delivery Address", "CARTOES");
   }, []);
 
   return (
@@ -29,7 +29,7 @@ export default function AddressPage() {
         <p style={{ fontSize: 14, fontWeight: 600, marginBottom: 12 }}>No meu endereço</p>
         <button
           onClick={() => {
-            trackButtonClicked("No meu endereco", "Delivery Address", "card_request");
+            trackButtonClicked("No meu endereco", "Delivery Address", "CARTOES");
             router.push("/cep");
           }}
           style={{
@@ -48,7 +48,7 @@ export default function AddressPage() {
 
         <button
           onClick={() => {
-            trackButtonClicked("Em outro endereco", "Delivery Address", "card_request");
+            trackButtonClicked("Em outro endereco", "Delivery Address", "CARTOES");
             router.push("/cep");
           }}
           style={{ background: "none", border: "none", color: "#21C25E", fontSize: 14, cursor: "pointer", padding: 0 }}

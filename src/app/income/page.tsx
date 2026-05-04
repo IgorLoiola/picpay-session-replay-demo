@@ -14,7 +14,7 @@ export default function IncomePage() {
 
   useEffect(() => {
     initMixpanel();
-    trackScreenViewed("Monthly Income", "card_request");
+    trackScreenViewed("Monthly Income", "CARTOES");
   }, []);
 
   const formatted = `R$ ${(cents / 100).toLocaleString("pt-BR", { minimumFractionDigits: 2 })}`;
@@ -39,7 +39,7 @@ export default function IncomePage() {
           <GreenButton
             disabled={cents === 0}
             onClick={() => {
-              trackButtonClicked("Continuar", "Monthly Income", "card_request", { income_value: cents / 100 });
+              trackButtonClicked("Continuar", "Monthly Income", "CARTOES", { income_value: cents / 100 });
               router.push("/address");
             }}
           >

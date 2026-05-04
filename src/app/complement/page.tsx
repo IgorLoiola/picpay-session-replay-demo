@@ -13,7 +13,7 @@ export default function ComplementPage() {
 
   useEffect(() => {
     initMixpanel();
-    trackScreenViewed("Complement", "card_request");
+    trackScreenViewed("Complement", "CARTOES");
   }, []);
 
   return (
@@ -41,7 +41,7 @@ export default function ComplementPage() {
           <GreenButton
             disabled={!complement}
             onClick={() => {
-              trackButtonClicked("Continuar", "Complement", "card_request", { complement });
+              trackButtonClicked("Continuar", "Complement", "CARTOES", { complement });
               router.push("/due-date");
             }}
           >
@@ -50,7 +50,7 @@ export default function ComplementPage() {
         </div>
         <button
           onClick={() => {
-            trackButtonClicked("Endereco sem complemento", "Complement", "card_request");
+            trackButtonClicked("Endereco sem complemento", "Complement", "CARTOES");
             router.push("/due-date");
           }}
           style={{ background: "none", border: "none", color: "#21C25E", fontSize: 14, cursor: "pointer", padding: 0, width: "100%", textAlign: "center" }}

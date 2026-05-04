@@ -7,7 +7,7 @@ import { initMixpanel, trackScreenViewed } from "@/lib/mixpanel";
 export default function SuccessPage() {
   useEffect(() => {
     initMixpanel();
-    trackScreenViewed("Card Requested Success", "card_request");
+    trackScreenViewed("Card Requested Success", "CARTOES");
   }, []);
 
   return (
