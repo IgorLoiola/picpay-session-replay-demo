@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import StatusBar from "@/components/StatusBar";
 import ScreenHeader from "@/components/ScreenHeader";
 import GreenButton from "@/components/GreenButton";
-import { initMixpanel, trackScreenViewed, trackButtonClicked } from "@/lib/mixpanel";
+import { initMixpanel, resetMixpanel, trackScreenViewed, trackButtonClicked } from "@/lib/mixpanel";
 
 export default function CardOfferPage() {
   const router = useRouter();
@@ -19,6 +19,20 @@ export default function CardOfferPage() {
     <div style={{ minHeight: 844, display: "flex", flexDirection: "column" }}>
       <StatusBar />
       <ScreenHeader showClose={false} />
+      <button
+        onClick={() => {
+          resetMixpanel();
+          initMixpanel();
+          trackScreenViewed("Card Offer", "CARTOES");
+        }}
+        style={{
+          position: "absolute", top: 52, right: 20,
+          background: "#333350", border: "none", color: "#A0A0B0",
+          fontSize: 11, padding: "4px 8px", borderRadius: 6, cursor: "pointer",
+        }}
+      >
+        Reset User
+      </button>
       <div style={{ flex: 1, padding: "0 24px", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <h1 style={{ fontSize: 24, fontWeight: 700, textAlign: "center", marginBottom: 24, lineHeight: 1.3 }}>
           Temos um PicPay Card<br />pra você!

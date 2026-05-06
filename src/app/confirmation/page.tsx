@@ -64,7 +64,7 @@ export default function ConfirmationPage() {
         </div>
 
         <p style={{ fontSize: 11, color: "#A0A0B0", lineHeight: 1.5, marginBottom: 20 }}>
-          Ao continuar, declaro que li e concordo com o Contrato de Cartão de Crédito do PicPay e autorizo, por prazo indeterminado: o débito automático do valor total ou parcial da fatura em minha conta na data do vencimento e eventuais encargos.
+          Ao continuar, declaro que li e concordo com o <a href="https://lp.allmedtech.com.br/politica-privacidade" target="_blank" rel="noopener noreferrer" style={{ color: "#21C25E", textDecoration: "underline" }}>Contrato de Cartão de Crédito do PicPay</a> e autorizo, por prazo indeterminado: o débito automático do valor total ou parcial da fatura em minha conta na data do vencimento e eventuais encargos.
         </p>
 
         <div style={{ marginTop: "auto", paddingBottom: 32 }}>

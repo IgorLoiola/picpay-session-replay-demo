@@ -26,6 +26,7 @@ export default function ComplementPage() {
         <p style={{ fontSize: 13, color: "#A0A0B0", marginBottom: 24 }}>Planalto Paulista, São Paulo - SP, 04078001</p>
 
         <input
+          className="mp-mask"
           type="text"
           value={complement}
           onChange={(e) => setComplement(e.target.value)}

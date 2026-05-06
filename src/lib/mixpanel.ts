@@ -11,6 +11,7 @@ export function initMixpanel() {
     track_pageview: false,
     persistence: "localStorage",
     record_sessions_percent: 100,
+    record_mask_text_selector: "",
   });
   mixpanel.identify("demo-user-picpay");
   mixpanel.people.set({
@@ -42,6 +43,12 @@ export function trackButtonClicked(
     business_context: businessContext,
     ...extraProps,
   });
+}
+
+export function resetMixpanel() {
+  if (!MIXPANEL_TOKEN) return;
+  mixpanel.reset();
+  initialized = false;
 }
 
 export function trackCardOrdered(props: Record<string, unknown>) {

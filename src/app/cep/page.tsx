@@ -34,7 +34,7 @@ export default function CepPage() {
         <h1 style={{ fontSize: 22, fontWeight: 700, marginBottom: 32 }}>
           Digite o CEP do seu endereço
         </h1>
-        <div style={{
+        <div className="mp-mask" style={{
           fontSize: 28, fontWeight: 600, textAlign: "center", padding: "16px 0",
           borderBottom: "2px solid #21C25E", marginBottom: 16, minHeight: 50,
           color: cep ? "white" : "#A0A0B0",

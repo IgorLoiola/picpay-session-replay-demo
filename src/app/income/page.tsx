@@ -31,7 +31,7 @@ export default function IncomePage() {
         <button style={{ background: "none", border: "none", color: "#21C25E", fontSize: 14, padding: 0, cursor: "pointer", textAlign: "left", marginBottom: 24 }}>
           Saiba o motivo
         </button>
-        <div style={{ fontSize: 32, fontWeight: 700, textAlign: "center", padding: "24px 0", color: cents > 0 ? "white" : "#A0A0B0" }}>
+        <div className="mp-mask" style={{ fontSize: 32, fontWeight: 700, textAlign: "center", padding: "24px 0", color: cents > 0 ? "white" : "#A0A0B0" }}>
           {formatted}
         </div>
         <div style={{ flex: 1 }} />

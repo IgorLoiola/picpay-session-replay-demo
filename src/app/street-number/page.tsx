@@ -28,7 +28,7 @@ export default function StreetNumberPage() {
         <p style={{ fontSize: 14, fontWeight: 600, marginBottom: 4 }}>Av Jamaris</p>
         <p style={{ fontSize: 13, color: "#A0A0B0", marginBottom: 24 }}>Planalto Paulista, São Paulo - SP, 04078001</p>
 
-        <div style={{
+        <div className="mp-mask" style={{
           fontSize: 28, fontWeight: 600, textAlign: "center", padding: "16px 0",
           borderBottom: "2px solid #21C25E", marginBottom: 16, minHeight: 50,
           color: number ? "white" : "#A0A0B0",

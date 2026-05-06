@@ -28,6 +28,7 @@ export default function AddressPage() {
 
         <p style={{ fontSize: 14, fontWeight: 600, marginBottom: 12 }}>No meu endereço</p>
         <button
+          className="mp-block"
           onClick={() => {
             trackButtonClicked("No meu endereco", "Delivery Address", "CARTOES");
             router.push("/cep");
